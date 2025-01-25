@@ -1,0 +1,544 @@
+ /* Reset margin, padding, and box-sizing for all elements */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the body */
+  body {
+    background-color: black; /* Sets the background color of the page */
+    color: white; /* Sets the text color */
+    font-family: "Poppins", sans-serif; /* Applies the Poppins font */
+  }
+  
+  /* Navbar container */
+  .navbar {
+    position: absolute; /* Positions the navbar at the top */
+    top: 0; /* Aligns the navbar to the top of the page */
+    width: 100%; /* Makes the navbar full width */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Aligns navbar items to both ends */
+    padding: 3% 5%; /* Adds padding for spacing */
+    z-index: 10; /* Ensures the navbar stays above other elements */
+  }
+  
+  /* Logo container in the navbar */
+  .navbar__brand {
+    width: 100px; /* Sets the logo width */
+    height: 100%; /* Ensures it takes full height */
+  }
+  
+  /* Logo image */
+  .brand__logo {
+    width: 100%; /* Ensures the logo fits the container */
+    height: 100%;
+  }
+  
+  /* Dropdown styling for language selection */
+  .language__drop__down {
+    background: transparent; /* Makes the background transparent */
+    border: none; /* Removes the border */
+    color: white; /* Sets the text color */
+  }
+  
+  /* Removes outline on focus */
+  .language__drop__down:focus {
+    outline: none;
+  }
+  
+  /* Styling for dropdown options */
+  .language__drop__down option {
+    background-color: black; /* Black background for dropdown options */
+  }
+  
+  /* Container around the dropdown */
+  .dropdown__container {
+    border: 1px solid white; /* White border around the dropdown */
+    padding: 0.4rem; /* Adds padding inside the container */
+    border-radius: 4px; /* Rounds the corners */
+    background: rgba(0, 0, 0, 0.4); /* Adds a semi-transparent background */
+  }
+  
+  /* Sign-in button styling */
+  .signin__button {
+    background-color: #dc030f; /* Red background */
+    border: 1px solid #dc030f; /* Red border */
+    color: white; /* White text */
+    padding: 0.25rem 0.5rem; /* Adds padding for spacing */
+    border-radius: 4px; /* Rounds the corners */
+  }
+  
+  /* Container for navbar items */
+  .navbar__nav__items {
+    display: flex; /* Uses flexbox for layout */
+    gap: 10px; /* Adds spacing between items */
+  }
+  
+  /* Background image container for hero section */
+  .hero__bg__image__container {
+    width: 100%; /* Full width */
+    height: 80vh; /* 80% of the viewport height */
+  }
+  
+  /* Background image in the hero section */
+  .hero__bg__image {
+    width: 100%; /* Ensures the image fits the container */
+    height: 100%; 
+    object-fit: cover; /* Ensures the image covers the container proportionally */
+  }
+  
+  /* Overlay for the hero section background */
+  .hero__bg__overlay {
+    position: absolute; /* Stretches over the image */
+    inset: 0; /* Covers the entire container */
+    width: 100%; 
+    height: 80vh; 
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    ); /* Creates a gradient effect */
+  }
+  
+  /* Hero section card */
+  .hero__card {
+    position: absolute; /* Overlaps the background */
+    top: 20%; /* Moves the card down from the top */
+    text-align: center; /* Centers text inside */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    gap: 10px; /* Adds spacing between items */
+  }
+  
+  /* Hero section title */
+  .hero__title {
+    font-weight: 600; /* Makes the text bold */
+    font-size: 2rem; /* Sets font size */
+  }
+  
+  /* Subtitle and description text */
+  .hero__subtitle,
+  .hero__description {
+    font-weight: 400; /* Normal font weight */
+    font-size: 1rem; /* Standard size for subtitles */
+  }
+  
+  /* Adds margin for description */
+  .hero__description {
+    margin: 0 50px; /* Adds space on left and right */
+  }
+  
+  /* Input field styling */
+  .email__input {
+    border: none; /* Removes border */
+    background: transparent; /* Makes background transparent */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    padding-left: 7px; /* Adds left padding for spacing */
+  }
+  
+  /* Label for input field */
+  .email__label {
+    color: rgb(153, 149, 149); /* Light gray color */
+    position: absolute; /* Position relative to the input field */
+    top: 28%; /* Initial position of the label */
+    left: 2%; /* Aligns label with input */
+    transition: 0.5s; /* Smooth animation for label */
+  }
+  
+  /* Form container for email input and button */
+  .email__form__container {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    align-items: center; /* Centers items horizontally */
+    gap: 15px; /* Adds spacing between items */
+  }
+  
+  /* Email form container styling */
+  .form__container {
+    background-color: white; /* White background */
+    width: 90%; /* 90% width of its parent */
+    height: 50px; /* Fixed height */
+    position: relative; /* For label and input alignment */
+  }
+  
+  /* Adjusts label position on focus */
+  .email__input:focus + .email__label {
+    top: 0.2rem; /* Moves the label up */
+    font-size: 10px; /* Reduces font size */
+  }
+  
+  /* Label adjustment when input is not empty */
+  .email__input:not(:placeholder-shown).email__input:not(:focus) + .email__label {
+    top: 0.2rem;
+    font-size: 10px;
+  }
+  
+  /* Removes focus outline for the input */
+  .email__input:focus-visible {
+    outline: none;
+  }
+  
+  /* Styling for primary button */
+  .primary__button {
+    background-color: #dc030f; /* Red background */
+    border: 1px solid #dc030f; /* Red border */
+    color: white; /* White text */
+    padding: 0.8rem 1.2rem; /* Adds padding */
+    border-radius: 2px; /* Slightly rounded corners */
+    font-size: 15px; /* Font size */
+    letter-spacing: 1px; /* Space between letters */
+  }
+  
+  /* Styling for feature sections */
+  .feature {
+    border-top: 8px solid #222; /* Top border for separation */
+    padding: 2rem 1rem; /* Padding for spacing */
+  }
+  
+  /* Feature details text */
+  .feature__details {
+    text-align: center; /* Centers text inside */
+  }
+  
+  /* Feature title */
+  .feature__title {
+    font-size: 25px; /* Font size for title */
+    font-weight: 600; /* Bold text */
+    margin: 10px 0; /* Vertical spacing */
+  }
+  
+  /* Feature subtitle */
+  .feature__sub__title {
+    font-size: 15px; /* Smaller font size */
+    font-weight: 400; /* Normal font weight */
+  }
+  
+  
+  /* Container for feature images */
+  .feature__image__container {
+    width: 100%; /* Takes full width */
+    position: relative; /* Allows positioning of child elements */
+  }
+  
+  /* Feature image */
+  .feature__image {
+    width: 100%; /* Ensures the image scales to container width */
+  }
+  
+  /* Background video container for features */
+  .feature__backgroud__video__container {
+    position: absolute; /* Overlays the image */
+    width: 100%; /* Covers the entire width of the container */
+    top: 20%; /* Positions the container down by 20% */
+    left: 13%; /* Moves container to the right by 13% */
+    height: 100%; /* Full height of the container */
+    max-width: 73%; /* Restricts maximum width */
+    max-height: 54%; /* Restricts maximum height */
+    z-index: -2; /* Places the video behind other elements */
+  }
+  
+  /* Feature background video */
+  .feature__backgroud__video {
+    width: 100%; /* Ensures the video covers the width of the container */
+  }
+  
+  /* Container for feature 2 poster */
+  .feature__2__poster__container {
+    position: absolute; /* Allows precise positioning */
+    bottom: 8%; /* Positions it 8% from the bottom */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for perfect centering */
+    width: 100%; /* Full width of the container */
+    max-width: 16em; /* Restricts width */
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Aligns items vertically in the center */
+    background-color: black; /* Black background */
+    border: 2px solid rgba(255, 255, 255, 0.25); /* Semi-transparent border */
+    border-radius: 10px; /* Rounded corners */
+    height: 60px; /* Fixed height */
+    padding: 0.25rem 0.6rem; /* Adds padding inside the container */
+    gap: 15px; /* Spacing between child elements */
+  }
+  
+  /* Container for the poster image */
+  .poster__container {
+    width: 20%; /* Takes up 20% of the width */
+  }
+  
+  /* Styling for poster image */
+  .poster {
+    width: 100%; /* Ensures the poster image fits the container */
+    height: 100%; /* Ensures the height matches the container */
+  }
+  
+  /* Details container for poster */
+  .poster__details {
+    width: 60%; /* Takes up 60% of the width */
+  }
+  
+  /* Title for poster */
+  .poster__details > h4 {
+    font-size: 13px; /* Font size for the title */
+    font-weight: 500; /* Slightly bold text */
+  }
+  
+  /* Subtitle for poster */
+  .poster__details > h6 {
+    font-size: 12px; /* Smaller font size */
+    font-weight: 400; /* Normal font weight */
+    color: rgb(63, 63, 246); /* Blue color */
+  }
+  
+  /* Container for the download GIF */
+  .download__gif__container {
+    width: 20%; /* Takes up 20% of the width */
+    height: 100%; /* Matches the full height */
+  }
+  
+  /* Download GIF styling */
+  .gif {
+    width: 100%; /* Ensures it fits the container */
+    height: 100%;
+  }
+  
+  /* Background video container for feature 3 */
+  .feature__3__backgroud__video__container {
+    max-width: 63%; /* Restricts the maximum width */
+    max-height: 47%; /* Restricts the maximum height */
+    z-index: -2; /* Places it behind other elements */
+    top: 9%; /* Positions it down by 9% */
+    left: 19%; /* Moves it to the right by 19% */
+  }
+  
+  /* FAQ accordion container */
+  .FAQ__accordian {
+    width: 100%; /* Takes full width */
+  }
+  
+  /* FAQ title */
+  .FAQ__title {
+    width: 100%; /* Ensures it stretches to full width */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces elements evenly */
+    padding: 15px 20px; /* Padding for spacing */
+    font-size: 18px; /* Font size for the text */
+    background-color: #303030; /* Dark gray background */
+    border: 1px solid #303030; /* Same color as background for seamless effect */
+    color: white; /* White text */
+  }
+  
+  /* Visible content of the FAQ */
+  .FAQ__visible {
+    background-color: #303030; /* Matches the FAQ title background */
+    border-top: 1px solid black; /* Black border at the top */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Prevents content overflow */
+    transition: max-height 0.5s ease-in-out; /* Smooth animation for expanding */
+  }
+  
+  /* Paragraphs inside FAQ */
+  .FAQ__visible > p {
+    margin: 1rem; /* Adds space around the text */
+  }
+  
+  /* FAQ list container */
+  .FAQ__list__container {
+    border-top: 8px solid #222; /* Dark top border for separation */
+    padding: 2rem 0; /* Vertical padding */
+  }
+  
+  /* FAQ heading */
+  .FAQ__heading {
+    font-size: 20px; /* Font size for heading */
+    text-align: center; /* Centers the text */
+    font-weight: 600; /* Bold text */
+    margin: 1rem 3rem; /* Adds margin for spacing */
+  }
+  
+  /* FAQ list styling */
+  .FAQ__list {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    align-items: center; /* Centers items horizontally */
+    gap: 10px; /* Adds spacing between items */
+  }
+  
+  /* Email section in FAQ */
+  .FAQ__get__started__email {
+    text-align: center; /* Centers the text */
+  }
+  
+  /* Email heading in FAQ */
+  .FAQ__get__started__email > h3 {
+    font-size: 18px; /* Font size */
+    font-weight: 400; /* Normal font weight */
+    margin: 2rem 0; /* Vertical margin */
+  }
+  
+  /* Footer section */
+  footer {
+    border-top: 8px solid #333; /* Dark border for separation */
+    padding: 2rem 1rem; /* Padding around footer content */
+    color: #757575; /* Light gray text */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    gap: 20px; /* Adds spacing between items */
+  }
+  
+  /* Footer row for links */
+  .footer__row__2 {
+    display: flex; /* Uses flexbox */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: space-around; /* Spaces items evenly */
+    gap: 20px; /* Adds spacing between items */
+  }
+  
+  /* Footer heading in the first row */
+  .footer__row__1 > h4 {
+    font-size: 15px; /* Font size */
+    font-weight: 500; /* Slightly bold text */
+  }
+  
+  /* Dropdown container in the footer */
+  .footer__row__3 > .dropdown__container {
+    width: fit-content; /* Adjusts width to fit content */
+    border: 1px solid #757575; /* Light gray border */
+    color: #757575; /* Matches text color */
+  }
+  
+  /* Language dropdown in footer */
+  .footer__row__3 > .dropdown__container > .language__drop__down {
+    color: #757575; /* Light gray text */
+  }
+  
+  /* Media query for screens wider than 768px */
+  @media (min-width: 768px) {
+    .hero__bg__image__container {
+      height: 100vh; /* Full height of viewport */
+    }
+  
+    .hero__bg__overlay {
+      height: 100vh; /* Matches container height */
+    }
+  
+    .hero__card {
+      top: 40%; /* Positions card lower */
+      left: 30%; /* Moves it slightly to the right */
+      transform: translate(-20%, -20%); /* Centers it */
+    }
+  
+    .hero__title {
+      font-size: 3rem; /* Larger font size */
+    }
+  
+    .hero__subtitle,
+    .hero__description {
+      font-size: 1.3rem; /* Larger font for readability */
+    }
+  }
+  
+  /* Media query for screens wider than 1024px */
+  @media (min-width: 1024px) {
+    .navbar {
+      padding: 2% 5%; /* Adjust padding for larger screens */
+    }
+  
+    .navbar__brand {
+      width: 150px; /* Increases logo size */
+    }
+  
+    .hero__card {
+      top: 50%; /* Centers vertically */
+      left: 50%; /* Centers horizontally */
+      transform: translate(-50%, -50%); /* Perfect centering */
+    }
+  
+    .feature {
+      display: flex; /* Side-by-side layout for features */
+      align-items: center; /* Centers items vertically */
+      justify-content: space-between; /* Spaces items evenly */
+      gap: 20px; /* Adds spacing */
+    }
+  }
+  
+  
+   /* Feature details section */
+  .feature__details {
+    text-align: left; /* Aligns the text to the left */
+    padding: 0 6rem; /* Adds horizontal padding for spacing */
+  }
+  
+  /* Feature title styling */
+  .feature__title {
+    font-size: 50px; /* Large font size for emphasis */
+  }
+  
+  /* Feature subtitle styling */
+  .feature__sub__title {
+    font-size: 25px; /* Medium font size for clarity */
+  }
+  
+  /* Feature image container styling */
+  .feature__image__container {
+    max-width: 500px; /* Restricts the maximum width of the container */
+  }
+  
+  /* Styling for every even feature (2nd, 4th, etc.) */
+  .feature:nth-child(even) {
+    flex-direction: row-reverse; /* Reverses the layout to alternate feature alignment */
+  }
+  
+  /* Poster container for feature 2 */
+  .feature__2__poster__container {
+    max-width: 20em; /* Restricts the width to 20em */
+    height: 100px; /* Fixed height */
+    padding: 1rem; /* Adds uniform padding */
+  }
+  
+  /* Poster container styling */
+  .poster__container {
+    width: 20%; /* Takes up 20% of the width */
+  }
+  
+  /* FAQ list container */
+  .FAQ__list {
+    padding: 1rem 25rem; /* Adds padding for spacing, especially on larger screens */
+  }
+  
+  /* FAQ email section */
+  .FAQ__get__started__email {
+    transform: translateX(16%); /* Moves the email section slightly to the right */
+  }
+  
+  /* Footer section */
+  footer {
+    padding: 2rem 20rem; /* Adds padding for spacing within the footer */
+    justify-content: flex-start; /* Aligns content to the start of the main axis */
+    text-align: left; /* Aligns text to the left */
+    align-items: flex-start; /* Aligns items to the start of the cross axis */
+  }
+  
+  /* Footer links section */
+  .footer__row__2 {
+    justify-content: space-between; /* Evenly spaces items */
+    align-items: flex-start; /* Aligns items to the start of the cross axis */
+    flex-wrap: nowrap; /* Prevents wrapping of items */
+  }
+  
+  /* Individual footer rows */
+  .footer__row__1,
+  .footer__row__3,
+  .footer__row__4 {
+    align-self: flex-start; /* Aligns each row to the start of its container */
+  }
+  
+  /* Media query for screens wider than 1254px */
+  @media (min-width: 1254px) {
+    /* No additional styles are defined, placeholder for potential future adjustments */
+  }

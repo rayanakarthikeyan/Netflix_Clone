@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta information about the page -->
+    <meta charset="UTF-8" />
+    <!-- Description for search engines -->
+    <meta name="description" content="Hello this is my first web page!." />
+    <!-- Make the page responsive to device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="src/style.css" />
+
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- Preconnect for faster loading of Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Link to the Poppins font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page title displayed in the browser tab -->
+    <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+
+    <!-- Favicon for the website -->
+    <link
+      rel="icon"
+      href="http://pngimg.com/uploads/netflix/small/netflix_PNG15.png"
+    />
+  </head>
+  <body>
+    <!-- Header section for the navigation bar -->
+    <header>
+      <nav class="navbar">
+        <!-- Logo section -->
+        <div class="navbar__brand">
+          <img
+            src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
+            alt="logo"
+            class="brand__logo"
+          />
+        </div>
+
+        <!-- Navigation items -->
+        <div class="navbar__nav__items">
+          <!-- Language selection dropdown -->
+          <div class="nav__item">
+            <div class="dropdown__container">
+              <!-- Globe icon -->
+              <i class="fas fa-globe"></i>
+              <select
+                name="languages"
+                id="languagesSelect"
+                class="language__drop__down"
+              >
+                <!-- Dropdown options for language selection -->
+                <option value="english" selected style="color: black;">
+                  English
+                </option>
+                <option value="hindi" style="color: black;">हिन्दी</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Sign-in button -->
+          <div class="nav__item">
+            <button class="signin__button">Sign in</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+      <!-- Hero section (top banner) -->
+      <section class="hero">
+        <!-- Background image container -->
+        <div class="hero__bg__image__container">
+          <img
+            src="https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+            alt="BG hero image"
+            class="hero__bg__image"
+          />
+        </div>
+        <!-- Semi-transparent overlay on the background -->
+        <div class="hero__bg__overlay"></div>
+
+        <!-- Hero card content -->
+        <div class="hero__card">
+          <!-- Title of the hero section -->
+          <h1 class="hero__title">
+            Unlimited Movies TV,<br />
+            Shows and More.
+          </h1>
+          <!-- Subtitle for the hero -->
+          <p class="hero__subtitle">Watch anywhere and cancel anytime.</p>
+          <!-- Short description -->
+          <p class="hero__description">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+
+          <!-- Email input form -->
+          <div class="email__form__container">
+            <div class="form__container">
+              <input type="email" class="email__input" placeholder=" " />
+              <label class="email__label">Email Address</label>
+            </div>
+            <button class="primary__button">
+              Get Started <i class="fal fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features section -->
+      <section class="features__container">
+        <!-- Feature 1 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">Enjoy on your TV.</h3>
+            <h5 class="feature__sub__title">
+              Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+              Blu-ray players and more.
+            </h5>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+              alt="Feature image"
+              class="feature__image"
+            />
+            <!-- Background video container -->
+            <div class="feature__backgroud__video__container">
+              <video
+                autoplay=""
+                loop=""
+                muted=""
+                class="feature__backgroud__video"
+              >
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional feature sections follow the same pattern as above -->
+
+      </section>
+
+      <!-- Frequently Asked Questions (FAQ) -->
+      <section class="FAQ__list__container">
+        <h1 class="FAQ__heading">Frequently Asked Questions</h1>
+        <div class="FAQ__list">
+          <!-- Accordion FAQ -->
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              What is Netflix?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                Netflix is a streaming service that offers a wide variety of
+                award-winning TV shows, movies, anime, documentaries, and more.
+              </p>
+            </div>
+          </div>
+          <!-- Additional FAQs follow the same structure -->
+        </div>
+
+        <!-- Email form within the FAQ section -->
+        <div class="FAQ__get__started__email">
+          <h3>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h3>
+          <div class="email__form__container">
+            <div class="form__container">
+              <input type="email" class="email__input" placeholder=" " />
+              <label class="email__label">Email Address</label>
+            </div>
+            <button class="primary__button">
+              Get Started <i class="fal fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with additional links -->
+    <footer>
+      <div class="footer__row__1">
+        <h4>Questions? Call 000-800-040-1843</h4>
+      </div>
+      <div class="footer__row__2">
+        <div class="column__1">
+          <p>FAQ</p>
+          <p>Investor Relations</p>
+          <p>Privacy</p>
+          <p>Speed Test</p>
+        </div>
+        <!-- Additional footer columns follow the same structure -->
+      </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="src/script.js"></script>
+  </body>
+  </html> 
